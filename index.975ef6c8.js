@@ -2951,7 +2951,9 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$20e5.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+/**
+ * Startpunkten för applikationen. Renderar App-komponenten till DOM-elementet med id "root".
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -2963,7 +2965,7 @@ const rootElement = document.getElementById("root");
 const root = (0, _clientDefault.default).createRoot(rootElement);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 9,
+    lineNumber: 13,
     columnNumber: 13
 }, undefined));
 
@@ -27222,7 +27224,12 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$2430.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+/**
+ * Använder Firebase för att hämta och uppdatera uppgifter. Delar uppgifterna i tre kolumner baserat på deras
+ * status: "to do", "in progress" och "done". Har funktioner för att lägga till uppgifter, markera uppgifter
+ * som "in progress" och "done", och ta bort uppgifter. Renderar TaskForm-komponenten och tre TaskList-komponenter
+ * för att visa uppgifterna.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
@@ -27289,7 +27296,7 @@ const App = ()=>{
                 children: "Scrum Board"
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 73,
+                lineNumber: 80,
                 columnNumber: 7
             }, undefined),
             errorMessage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27297,14 +27304,14 @@ const App = ()=>{
                 children: errorMessage
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 74,
+                lineNumber: 81,
                 columnNumber: 24
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskformDefault.default), {
                 addTask: addTask
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 75,
+                lineNumber: 82,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27321,7 +27328,7 @@ const App = ()=>{
                         removeTask: removeTask
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 77,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskListDefault.default), {
@@ -27332,7 +27339,7 @@ const App = ()=>{
                         removeTask: removeTask
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 84,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskListDefault.default), {
@@ -27343,19 +27350,19 @@ const App = ()=>{
                         removeTask: removeTask
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 91,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.jsx",
-                lineNumber: 76,
+                lineNumber: 83,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 72,
+        lineNumber: 79,
         columnNumber: 5
     }, undefined);
 };
@@ -27370,8 +27377,11 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./firebase":"bQFTD","./Taskform":"01z6D","./TaskList":"lvOHX","./css/style.css":"6ZQyu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bQFTD":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./firebase":"bQFTD","./TaskList":"lvOHX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./css/style.css":"6ZQyu","./Taskform":"01z6D"}],"bQFTD":[function(require,module,exports) {
+/**
+ * Innehåller Firebase-konfigurationen. Exporterar referenser till Firebase-databasen
+ * som används för att hantera uppgifterna.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "tasksRef", ()=>tasksRef);
 parcelHelpers.export(exports, "set", ()=>(0, _database.set));
@@ -42277,110 +42287,208 @@ RepoInfo;
  * @packageDocumentation
  */ registerDatabase();
 
-},{"6b38617303e2f7b9":"d5jf4","@firebase/app":"3AcPV","@firebase/component":"bi1VB","@firebase/util":"ePiK6","@firebase/logger":"fZmft","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"01z6D":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4793 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"6b38617303e2f7b9":"d5jf4","@firebase/app":"3AcPV","@firebase/component":"bi1VB","@firebase/util":"ePiK6","@firebase/logger":"fZmft","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lvOHX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$29c8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4793.prelude(module);
+$parcel$ReactRefreshHelpers$29c8.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+/**
+ * Visar en lista med uppgifter baserat på deras status (antingen "to do", "in progress" eller "done").
+ * Tar emot uppgifterna och statusen som props. Renderar Task-komponenter för varje uppgift i listan.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _task = require("./Task");
+var _taskDefault = parcelHelpers.interopDefault(_task);
+const TaskList = ({ tasks, status, markTaskAsInProgress, markTaskAsDone, removeTask })=>{
+    const filteredTasks = Object.entries(tasks).filter(([key, task])=>task.status === status);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "task-list",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: status
+            }, void 0, false, {
+                fileName: "src/TaskList.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            filteredTasks.map(([key, task])=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskDefault.default), {
+                    taskId: key,
+                    task: task,
+                    markTaskAsInProgress: markTaskAsInProgress,
+                    markTaskAsDone: markTaskAsDone,
+                    removeTask: removeTask
+                }, key, false, {
+                    fileName: "src/TaskList.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined))
+        ]
+    }, void 0, true, {
+        fileName: "src/TaskList.jsx",
+        lineNumber: 13,
+        columnNumber: 5
+    }, undefined);
+};
+_c = TaskList;
+exports.default = TaskList;
+var _c;
+$RefreshReg$(_c, "TaskList");
+
+  $parcel$ReactRefreshHelpers$29c8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Task":"g800U","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g800U":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d649 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d649.prelude(module);
+
+try {
+/**
+ * Visar en enskild uppgift. Visar uppgiftsbeskrivningen, kategorin och den tilldelade personen.
+ * Innehåller knappar för att ändra uppgiftens status (till "in progress" eller "done") och för att ta bort uppgiften.
+ * Tilldelar en person till uppgiften när den flyttas till "in progress".
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-const TaskForm = ({ addTask })=>{
+const Task = ({ taskId, task, markTaskAsInProgress, markTaskAsDone, removeTask })=>{
     _s();
-    const [task, setTask] = (0, _react.useState)("");
-    const [category, setCategory] = (0, _react.useState)("ux");
+    const [assignee, setAssignee] = (0, _react.useState)("");
     const [errorMessage, setErrorMessage] = (0, _react.useState)("");
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        if (task.trim() !== "") {
-            addTask(task, category).catch((error)=>{
-                setErrorMessage(`Failed to add task: ${error.message}`);
+    const handleAssign = ()=>{
+        if (assignee) {
+            markTaskAsInProgress(taskId, assignee).catch((error)=>{
+                setErrorMessage(`Failed to assign task: ${error.message}`);
             });
-            setTask("");
-        } else setErrorMessage("Task description cannot be empty.");
+            setAssignee("");
+        } else setErrorMessage("Please enter a name to assign the task.");
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-        onSubmit: handleSubmit,
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "task",
         children: [
             errorMessage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "error",
                 children: errorMessage
             }, void 0, false, {
-                fileName: "src/Taskform.jsx",
-                lineNumber: 22,
+                fileName: "src/Task.jsx",
+                lineNumber: 27,
                 columnNumber: 24
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                value: task,
-                onChange: (e)=>setTask(e.target.value),
-                placeholder: "New task"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: task.assignment
             }, void 0, false, {
-                fileName: "src/Taskform.jsx",
-                lineNumber: 23,
+                fileName: "src/Task.jsx",
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                value: category,
-                onChange: (e)=>setCategory(e.target.value),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "ux",
-                        children: "UX"
-                    }, void 0, false, {
-                        fileName: "src/Taskform.jsx",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "dev frontend",
-                        children: "Dev Frontend"
-                    }, void 0, false, {
-                        fileName: "src/Taskform.jsx",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "dev backend",
-                        children: "Dev Backend"
-                    }, void 0, false, {
-                        fileName: "src/Taskform.jsx",
-                        lineNumber: 32,
-                        columnNumber: 9
-                    }, undefined)
+                    "Category: ",
+                    task.category
                 ]
             }, void 0, true, {
-                fileName: "src/Taskform.jsx",
+                fileName: "src/Task.jsx",
                 lineNumber: 29,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                type: "submit",
-                children: "Add Task"
-            }, void 0, false, {
-                fileName: "src/Taskform.jsx",
-                lineNumber: 34,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    "Status: ",
+                    task.status
+                ]
+            }, void 0, true, {
+                fileName: "src/Task.jsx",
+                lineNumber: 30,
                 columnNumber: 7
+            }, undefined),
+            task.status === "to do" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        value: assignee,
+                        onChange: (e)=>setAssignee(e.target.value),
+                        placeholder: "Enter assignee name"
+                    }, void 0, false, {
+                        fileName: "src/Task.jsx",
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: handleAssign,
+                        children: "Assign >>"
+                    }, void 0, false, {
+                        fileName: "src/Task.jsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Task.jsx",
+                lineNumber: 32,
+                columnNumber: 9
+            }, undefined),
+            task.status === "in progress" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            "Assigned to: ",
+                            task.assigned
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Task.jsx",
+                        lineNumber: 44,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>markTaskAsDone(taskId).catch((error)=>{
+                                setErrorMessage(`Failed to mark task as done: ${error.message}`);
+                            }),
+                        children: "Done >>"
+                    }, void 0, false, {
+                        fileName: "src/Task.jsx",
+                        lineNumber: 45,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Task.jsx",
+                lineNumber: 43,
+                columnNumber: 9
+            }, undefined),
+            task.status === "done" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>removeTask(taskId).catch((error)=>{
+                        setErrorMessage(`Failed to remove task: ${error.message}`);
+                    }),
+                children: "Remove X"
+            }, void 0, false, {
+                fileName: "src/Task.jsx",
+                lineNumber: 51,
+                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Taskform.jsx",
-        lineNumber: 21,
+        fileName: "src/Task.jsx",
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
-_s(TaskForm, "8iD/RgpA5981j9wc6/gXOPf5fXQ=");
-_c = TaskForm;
-exports.default = TaskForm;
+_s(Task, "G6Lkw5gJtzJKNIzMsGfG6GFIJTU=");
+_c = Task;
+exports.default = Task;
 var _c;
-$RefreshReg$(_c, "TaskForm");
+$RefreshReg$(_c, "Task");
 
-  $parcel$ReactRefreshHelpers$4793.postlude(module);
+  $parcel$ReactRefreshHelpers$d649.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -42523,205 +42631,117 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"lvOHX":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$29c8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"6ZQyu":[function() {},{}],"01z6D":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4793 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$29c8.prelude(module);
+$parcel$ReactRefreshHelpers$4793.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _task = require("./Task");
-var _taskDefault = parcelHelpers.interopDefault(_task);
-const TaskList = ({ tasks, status, markTaskAsInProgress, markTaskAsDone, removeTask })=>{
-    const filteredTasks = Object.entries(tasks).filter(([key, task])=>task.status === status);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "task-list",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: status
-            }, void 0, false, {
-                fileName: "src/TaskList.jsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            filteredTasks.map(([key, task])=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskDefault.default), {
-                    taskId: key,
-                    task: task,
-                    markTaskAsInProgress: markTaskAsInProgress,
-                    markTaskAsDone: markTaskAsDone,
-                    removeTask: removeTask
-                }, key, false, {
-                    fileName: "src/TaskList.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined))
-        ]
-    }, void 0, true, {
-        fileName: "src/TaskList.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
-};
-_c = TaskList;
-exports.default = TaskList;
-var _c;
-$RefreshReg$(_c, "TaskList");
-
-  $parcel$ReactRefreshHelpers$29c8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Task":"g800U","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g800U":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d649 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d649.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+/**
+ * Innehåller ett formulär för att lägga till nya uppgifter. Har inmatningsfält för uppgift och kategori.
+ * Anropar addTask-funktionen från App.jsx när en ny uppgift läggs till.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-const Task = ({ taskId, task, markTaskAsInProgress, markTaskAsDone, removeTask })=>{
+const TaskForm = ({ addTask })=>{
     _s();
-    const [assignee, setAssignee] = (0, _react.useState)("");
+    const [task, setTask] = (0, _react.useState)("");
+    const [category, setCategory] = (0, _react.useState)("ux");
     const [errorMessage, setErrorMessage] = (0, _react.useState)("");
-    const handleAssign = ()=>{
-        if (assignee) {
-            markTaskAsInProgress(taskId, assignee).catch((error)=>{
-                setErrorMessage(`Failed to assign task: ${error.message}`);
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        if (task.trim() !== "") {
+            addTask(task, category).catch((error)=>{
+                setErrorMessage(`Failed to add task: ${error.message}`);
             });
-            setAssignee("");
-        } else setErrorMessage("Please enter a name to assign the task.");
+            setTask("");
+        } else setErrorMessage("Task description cannot be empty.");
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "task",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+        onSubmit: handleSubmit,
         children: [
             errorMessage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "error",
                 children: errorMessage
             }, void 0, false, {
-                fileName: "src/Task.jsx",
-                lineNumber: 21,
+                fileName: "src/Taskform.jsx",
+                lineNumber: 27,
                 columnNumber: 24
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: task.assignment
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: task,
+                onChange: (e)=>setTask(e.target.value),
+                placeholder: "New task"
             }, void 0, false, {
-                fileName: "src/Task.jsx",
-                lineNumber: 22,
+                fileName: "src/Taskform.jsx",
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                value: category,
+                onChange: (e)=>setCategory(e.target.value),
                 children: [
-                    "Category: ",
-                    task.category
-                ]
-            }, void 0, true, {
-                fileName: "src/Task.jsx",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: [
-                    "Status: ",
-                    task.status
-                ]
-            }, void 0, true, {
-                fileName: "src/Task.jsx",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            task.status === "to do" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        value: assignee,
-                        onChange: (e)=>setAssignee(e.target.value),
-                        placeholder: "Enter assignee name"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "ux",
+                        children: "UX"
                     }, void 0, false, {
-                        fileName: "src/Task.jsx",
-                        lineNumber: 27,
-                        columnNumber: 11
+                        fileName: "src/Taskform.jsx",
+                        lineNumber: 35,
+                        columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: handleAssign,
-                        children: "Assign >>"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "dev frontend",
+                        children: "Dev Frontend"
                     }, void 0, false, {
-                        fileName: "src/Task.jsx",
-                        lineNumber: 33,
-                        columnNumber: 11
+                        fileName: "src/Taskform.jsx",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "dev backend",
+                        children: "Dev Backend"
+                    }, void 0, false, {
+                        fileName: "src/Taskform.jsx",
+                        lineNumber: 37,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/Task.jsx",
-                lineNumber: 26,
-                columnNumber: 9
+                fileName: "src/Taskform.jsx",
+                lineNumber: 34,
+                columnNumber: 7
             }, undefined),
-            task.status === "in progress" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            "Assigned to: ",
-                            task.assigned
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Task.jsx",
-                        lineNumber: 38,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>markTaskAsDone(taskId).catch((error)=>{
-                                setErrorMessage(`Failed to mark task as done: ${error.message}`);
-                            }),
-                        children: "Done >>"
-                    }, void 0, false, {
-                        fileName: "src/Task.jsx",
-                        lineNumber: 39,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/Task.jsx",
-                lineNumber: 37,
-                columnNumber: 9
-            }, undefined),
-            task.status === "done" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>removeTask(taskId).catch((error)=>{
-                        setErrorMessage(`Failed to remove task: ${error.message}`);
-                    }),
-                children: "Remove X"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                type: "submit",
+                children: "Add Task"
             }, void 0, false, {
-                fileName: "src/Task.jsx",
-                lineNumber: 45,
-                columnNumber: 9
+                fileName: "src/Taskform.jsx",
+                lineNumber: 39,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Task.jsx",
-        lineNumber: 20,
+        fileName: "src/Taskform.jsx",
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
-_s(Task, "G6Lkw5gJtzJKNIzMsGfG6GFIJTU=");
-_c = Task;
-exports.default = Task;
+_s(TaskForm, "8iD/RgpA5981j9wc6/gXOPf5fXQ=");
+_c = TaskForm;
+exports.default = TaskForm;
 var _c;
-$RefreshReg$(_c, "Task");
+$RefreshReg$(_c, "TaskForm");
 
-  $parcel$ReactRefreshHelpers$d649.postlude(module);
+  $parcel$ReactRefreshHelpers$4793.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6ZQyu":[function() {},{}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire4527")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire4527")
 
 //# sourceMappingURL=index.975ef6c8.js.map
