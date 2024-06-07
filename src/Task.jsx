@@ -1,3 +1,9 @@
+/**
+ * Visar en enskild uppgift. Visar uppgiftsbeskrivningen, kategorin och den tilldelade personen.
+ * Innehåller knappar för att ändra uppgiftens status (till "in progress" eller "done") och för att ta bort uppgiften.
+ * Tilldelar en person till uppgiften när den flyttas till "in progress".
+ */
+
 import React, { useState } from 'react';
 
 const Task = ({ taskId, task, markTaskAsInProgress, markTaskAsDone, removeTask }) => {

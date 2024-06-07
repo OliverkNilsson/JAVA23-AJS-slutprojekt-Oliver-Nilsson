@@ -1,3 +1,8 @@
+/**
+ * Innehåller Firebase-konfigurationen. Exporterar referenser till Firebase-databasen
+ * som används för att hantera uppgifterna.
+ */
+
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, push, onValue, remove, child } from 'firebase/database';
 

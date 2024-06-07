@@ -1,3 +1,10 @@
+/**
+ * Använder Firebase för att hämta och uppdatera uppgifter. Delar uppgifterna i tre kolumner baserat på deras
+ * status: "to do", "in progress" och "done". Har funktioner för att lägga till uppgifter, markera uppgifter
+ * som "in progress" och "done", och ta bort uppgifter. Renderar TaskForm-komponenten och tre TaskList-komponenter
+ * för att visa uppgifterna.
+ */
+
 import React, { useState, useEffect } from "react";
 import { tasksRef, set, push, onValue, remove, ref, child } from "./firebase";
 import TaskForm from "./Taskform";

@@ -1,3 +1,8 @@
+/**
+ * Innehåller ett formulär för att lägga till nya uppgifter. Har inmatningsfält för uppgift och kategori.
+ * Anropar addTask-funktionen från App.jsx när en ny uppgift läggs till.
+ */
+
 import React, { useState } from 'react';
 
 const TaskForm = ({ addTask }) => {
