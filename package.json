@@ -7,7 +7,7 @@
     "build": "parcel build ./src/index.html --dist-dir docs --public-url ./",
     "clean": "del-cli ./.parcel-cache ./docs ./dist",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d docs",
     "start": "parcel index.html"
   },
   "keywords": [],
